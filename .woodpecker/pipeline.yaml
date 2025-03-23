@@ -14,3 +14,9 @@ steps:
     image: eclipse-temurin:11
     commands:
       - bash ./gradlew build --no-watch-fs
+      - ls build
+  - name: publish
+    image: woodpeckerci/plugin-release
+    settings:
+      files:
+        - 'build/*.jar'

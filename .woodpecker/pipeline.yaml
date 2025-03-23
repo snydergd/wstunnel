@@ -3,7 +3,7 @@ when:
     branch: woodpecker-test
   - event: manual
     branch: woodpecker-test
-    
+  - event: tag  
 
 steps:
   - name: build
@@ -14,9 +14,11 @@ steps:
     image: eclipse-temurin:11
     commands:
       - bash ./gradlew build --no-watch-fs
-      - ls build
+      - ls build/lib
   - name: publish
     image: woodpeckerci/plugin-release
     settings:
       files:
         - 'build/*.jar'
+    when:
+    - event: tag

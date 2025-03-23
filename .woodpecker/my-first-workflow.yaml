@@ -1,6 +1,8 @@
 when:
   - event: push
     branch: woodpecker-test
+  - event: manual
+    branch: woodpecker-test
     
 
 steps:

@@ -13,4 +13,4 @@ steps:
   - name: a-test-step
     image: eclipse-temurin:8
     commands:
-      - bash ./gradlew build -Dorg.gradle.vfs.verbose=true
+      - bash ./gradlew build --no-watch-fs

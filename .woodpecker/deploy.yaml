@@ -1,0 +1,10 @@
+depends_on:
+- build
+
+steps:
+  - name: deploy
+    image: debian
+    commands:
+      - ls
+      - ls build
+      - ls dist

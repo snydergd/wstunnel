@@ -11,6 +11,6 @@ steps:
     commands:
       - echo "This is the build step"
   - name: a-test-step
-    image: eclipse-temurin:8
+    image: eclipse-temurin:11
     commands:
       - bash ./gradlew build --no-watch-fs

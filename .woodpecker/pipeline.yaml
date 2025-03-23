@@ -20,5 +20,7 @@ steps:
     settings:
       files:
         - 'build/libs/*.jar'
+      api_key:
+        from_secret: API_KEY
     when:
     - event: tag
